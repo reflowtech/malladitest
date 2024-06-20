@@ -1,0 +1,27 @@
+.dashintro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashintro a {
+  width: 125px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: all 0.1s ease-in-out;
+  background-color: #7700ff;
+}
+.dashintro a:hover {
+  background-color: #000000;
+  scale: 1.1;
+}/*# sourceMappingURL=Admindash.css.map */
+
+.gear{
+  width: 40px;
+  height: 40px;
+}
+

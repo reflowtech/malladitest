@@ -1,0 +1,202 @@
+@keyframes updown {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes zoominout {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.notification{
+    position: absolute;
+    z-index: 999;
+    top: 80px;
+    right: 5px;
+
+    height: 50px;
+    min-width: 200px;
+
+    border-radius: 10px;
+    background-color: red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    p{
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
+
+.slideXto0{
+    transform: translateY(-200%);
+}
+
+.loginbox {
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: calc(100svh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 30px 20px;
+
+    .loginleftbox {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 30px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: updown 3s infinite ease-in-out;
+        }
+    }
+
+    .loginrightbox {
+        width: 50%;
+        height: 100%;
+        padding: 10px;
+
+        form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            h1 {
+                font-size: 2.2rem;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                width: 100%;
+
+                color: #696969;
+                font-size: 1.1rem;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 10px;
+                line-height: 25px;
+            }
+
+            a {
+                margin-top: -10px;
+                width: 80%;
+                font-size: 1rem;
+                font-weight: 500;
+                color: #000;
+                text-align: right;
+            }
+
+            .primary-btn {
+                margin-top: 30px;
+                width: 80%;
+                height: 50px;
+                border-radius: 25px;
+
+                font-size: 1rem;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+
+            .inputbox {
+                margin-top: 30px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    width: 80%;
+                    height: 50px;
+                    color: black;
+                    border: 2px solid rgb(0, 0, 0);
+                    border-radius: 25px;
+                    outline: none;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    padding: 0px 20px;
+                    margin-bottom: 20px;
+
+                    padding: 10px 30px;
+                    &::placeholder {
+                        color: rgb(123, 123, 123);
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .loginbox {
+        .loginleftbox {
+            display: none;
+        }
+        .loginrightbox {
+            width: 100%;
+            height: 100%;
+
+            form {
+                a {
+                    width: 100%;
+                }
+
+                h1 {
+                    font-size: 2rem;
+                }
+                h2 {
+                    font-size: 0.9rem;
+                    line-height: 20px;
+                    word-spacing: 4px;
+                }
+
+                .primary-btn {
+                    width: 100%;
+                }
+
+                .inputbox {
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

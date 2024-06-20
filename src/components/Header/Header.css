@@ -1,0 +1,67 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 5px 15px;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logobox img {
+  width: 150px;
+  height: 50px;
+}
+.header .menubtn {
+  cursor: pointer;
+  display: none;
+}
+.header .navlinks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+.header .navlinks a {
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .header .menubtn {
+    display: block;
+  }
+  .header .navlinks {
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 70px;
+    height: calc(100vh - 70px);
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .header .navlinks a {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .header .navlinks .primary-btn {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 70%;
+  }
+  .header .slideXto0 {
+    transform: translateX(0%);
+  }
+}/*# sourceMappingURL=Header.css.map */

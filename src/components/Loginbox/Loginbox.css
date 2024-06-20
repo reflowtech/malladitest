@@ -1,0 +1,175 @@
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes zoominout {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.notification {
+  position: absolute;
+  z-index: 999;
+  top: 80px;
+  right: 5px;
+  height: 50px;
+  min-width: 200px;
+  border-radius: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.notification p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.slideXto0 {
+  transform: translateY(-200%);
+}
+
+.loginbox {
+  position: relative;
+  top: 70px;
+  width: 100%;
+  height: calc(100svh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+.loginbox .loginleftbox {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 30px;
+}
+.loginbox .loginleftbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  animation: updown 3s infinite ease-in-out;
+}
+.loginbox .loginrightbox {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+}
+.loginbox .loginrightbox form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.loginbox .loginrightbox form h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.loginbox .loginrightbox form h2 {
+  width: 100%;
+  color: #696969;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+.loginbox .loginrightbox form a {
+  margin-top: -10px;
+  width: 80%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  text-align: right;
+}
+.loginbox .loginrightbox form .primary-btn {
+  margin-top: 30px;
+  width: 80%;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.loginbox .loginrightbox form .primary-btn:hover {
+  scale: 1.1;
+}
+.loginbox .loginrightbox form .inputbox {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loginbox .loginrightbox form .inputbox input {
+  width: 80%;
+  height: 50px;
+  color: black;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+}
+.loginbox .loginrightbox form .inputbox input::-moz-placeholder {
+  color: rgb(123, 123, 123);
+  font-size: 0.9rem;
+}
+.loginbox .loginrightbox form .inputbox input::placeholder {
+  color: rgb(123, 123, 123);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .loginbox .loginleftbox {
+    display: none;
+  }
+  .loginbox .loginrightbox {
+    width: 100%;
+    height: 100%;
+  }
+  .loginbox .loginrightbox form a {
+    width: 100%;
+  }
+  .loginbox .loginrightbox form h1 {
+    font-size: 2rem;
+  }
+  .loginbox .loginrightbox form h2 {
+    font-size: 0.9rem;
+    line-height: 20px;
+    word-spacing: 4px;
+  }
+  .loginbox .loginrightbox form .primary-btn {
+    width: 100%;
+  }
+  .loginbox .loginrightbox form .inputbox input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Loginbox.css.map */
